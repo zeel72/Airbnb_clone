@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%" style="background:#0b1120; font-family: Inter, system-ui, -apple-system, sans-serif;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="grad-edge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="grad-bff" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#4F46E5" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="grad-micro" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F43F5E" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#BE123C" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="grad-data" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#047857" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="grad-event" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#B45309" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <!-- Marker Arrow -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#64748B"/>
+    </marker>
+    <marker id="arrow-pink" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#F43F5E"/>
+    </marker>
+  </defs>
+
+  <!-- Title & Header -->
+  <text x="40" y="48" fill="#F8FAFC" font-size="22" font-weight="800" letter-spacing="-0.5">Airbnb Production-Scale Vacation Rental Architecture</text>
+  <text x="40" y="74" fill="#94A3B8" font-size="13">High-Availability, Multi-Region Scaling Strategy: Frontend, Backend, Storage, Geospatial Search &amp; Deployment</text>
+
+  <!-- 1. Client & Global Edge Tier -->
+  <g transform="translate(40, 100)">
+    <rect width="260" height="660" rx="12" fill="url(#grad-edge)" stroke="#0284C7" stroke-width="1.5" stroke-dasharray="4 2"/>
+    <text x="20" y="32" fill="#38BDF8" font-size="14" font-weight="700">1. CLIENTS &amp; GLOBAL EDGE</text>
+
+    <!-- Client Devices -->
+    <rect x="20" y="55" width="220" height="70" rx="8" fill="#1E293B" stroke="#334155"/>
+    <text x="35" y="82" fill="#F1F5F9" font-size="13" font-weight="600">Web &amp; Mobile Clients</text>
+    <text x="35" y="104" fill="#94A3B8" font-size="11">Next.js SSR / React Native / PWA</text>
+
+    <!-- Global Edge / Cloudflare -->
+    <rect x="20" y="145" width="220" height="90" rx="8" fill="#1E293B" stroke="#0284C7"/>
+    <text x="35" y="172" fill="#38BDF8" font-size="13" font-weight="600">Global Anycast CDN &amp; WAF</text>
+    <text x="35" y="194" fill="#94A3B8" font-size="11">Cloudflare Edge / Fastly</text>
+    <text x="35" y="214" fill="#64748B" font-size="10">DDoS Protection • SSL Termination • Bot Mitigation</text>
+
+    <!-- Edge Cache & Assets -->
+    <rect x="20" y="255" width="220" height="80" rx="8" fill="#1E293B" stroke="#334155"/>
+    <text x="35" y="282" fill="#F1F5F9" font-size="13" font-weight="600">Edge Media Pipeline</text>
+    <text x="35" y="304" fill="#94A3B8" font-size="11">Automated Sharp WebP/AVIF</text>
+    <text x="35" y="322" fill="#64748B" font-size="10">Sub-50ms Global Asset Delivery</text>
+
+    <!-- Metrics -->
+    <rect x="20" y="355" width="220" height="110" rx="8" fill="#0F172A" stroke="#1E293B"/>
+    <text x="35" y="380" fill="#E2E8F0" font-size="12" font-weight="600">Frontend Performance SLAs</text>
+    <text x="35" y="405" fill="#38BDF8" font-size="11">• LCP: &lt; 1.2s via Edge Hydration</text>
+    <text x="35" y="425" fill="#38BDF8" font-size="11">• INP: &lt; 80ms via React Server State</text>
+    <text x="35" y="445" fill="#38BDF8" font-size="11">• 99.99% Global Uptime</text>
+  </g>
+
+  <!-- 2. API Gateway & BFF Layer -->
+  <g transform="translate(330, 100)">
+    <rect width="250" height="660" rx="12" fill="url(#grad-bff)" stroke="#6366F1" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#A5B4FC" font-size="14" font-weight="700">2. API GATEWAY &amp; BFF</text>
+
+    <!-- Envoy / Gateway -->
+    <rect x="20" y="55" width="210" height="90" rx="8" fill="#1E293B" stroke="#6366F1"/>
+    <text x="35" y="82" fill="#F1F5F9" font-size="13" font-weight="600">Envoy Gateway Proxy</text>
+    <text x="35" y="104" fill="#A5B4FC" font-size="11">gRPC-Web &amp; HTTP/3</text>
+    <text x="35" y="124" fill="#64748B" font-size="10">Rate Limiting • Geo-IP Routing</text>
+
+    <!-- Auth & Identity -->
+    <rect x="20" y="165" width="210" height="85" rx="8" fill="#1E293B" stroke="#334155"/>
+    <text x="35" y="192" fill="#F1F5F9" font-size="13" font-weight="600">Auth &amp; Session Service</text>
+    <text x="35" y="214" fill="#94A3B8" font-size="11">OAuth2 • JWT Validation</text>
+    <text x="35" y="232" fill="#64748B" font-size="10">Distributed Redis Revocation List</text>
+
+    <!-- GraphQL Federation -->
+    <rect x="20" y="270" width="210" height="95" rx="8" fill="#1E293B" stroke="#818CF8"/>
+    <text x="35" y="297" fill="#F1F5F9" font-size="13" font-weight="600">Apollo Federation (BFF)</text>
+    <text x="35" y="319" fill="#A5B4FC" font-size="11">Unified Supergraph Schema</text>
+    <text x="35" y="339" fill="#64748B" font-size="10">Entity Stitching &amp; Query Caching</text>
+
+    <!-- WebSocket Engine -->
+    <rect x="20" y="385" width="210" height="80" rx="8" fill="#1E293B" stroke="#334155"/>
+    <text x="35" y="412" fill="#F1F5F9" font-size="13" font-weight="600">WebSocket / SSE Fleet</text>
+    <text x="35" y="434" fill="#94A3B8" font-size="11">Realtime Calendar &amp; Instant Msg</text>
+  </g>
+
+  <!-- 3. Core Microservices Domain Tier -->
+  <g transform="translate(610, 100)">
+    <rect width="270" height="660" rx="12" fill="url(#grad-micro)" stroke="#F43F5E" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#FDA4AF" font-size="14" font-weight="700">3. CORE MICROSERVICES</text>
+
+    <!-- Service 1: Listing Service -->
+    <rect x="20" y="55" width="230" height="65" rx="8" fill="#1E293B" stroke="#F43F5E"/>
+    <text x="35" y="80" fill="#F1F5F9" font-size="13" font-weight="600">Listing &amp; Content Service</text>
+    <text x="35" y="100" fill="#FDA4AF" font-size="11">Photos, Amenities, House Rules, Descriptions</text>
+
+    <!-- Service 2: Geospatial Search Engine -->
+    <rect x="20" y="130" width="230" height="75" rx="8" fill="#1E293B" stroke="#F43F5E"/>
+    <text x="35" y="155" fill="#F1F5F9" font-size="13" font-weight="600">Geospatial Search Engine</text>
+    <text x="35" y="175" fill="#FDA4AF" font-size="11">Uber H3 Spatial Hex Index</text>
+    <text x="35" y="193" fill="#64748B" font-size="10">Bounding box queries &amp; Radius filtering</text>
+
+    <!-- Service 3: Reservation & Distributed Lock -->
+    <rect x="20" y="215" width="230" height="85" rx="8" fill="#1E293B" stroke="#F43F5E"/>
+    <text x="35" y="240" fill="#F1F5F9" font-size="13" font-weight="600">Booking &amp; Availability Engine</text>
+    <text x="35" y="260" fill="#FDA4AF" font-size="11">2-Phase Distributed Locking (Redlock)</text>
+    <text x="35" y="278" fill="#64748B" font-size="10">Prevents double-booking across time zones</text>
+
+    <!-- Service 4: Dynamic Pricing -->
+    <rect x="20" y="310" width="230" height="65" rx="8" fill="#1E293B" stroke="#334155"/>
+    <text x="35" y="335" fill="#F1F5F9" font-size="13" font-weight="600">Pricing &amp; Yield Management</text>
+    <text x="35" y="355" fill="#94A3B8" font-size="11">Nightly rate computation, taxes &amp; discounts</text>
+
+    <!-- Service 5: Reviews & Trust -->
+    <rect x="20" y="385" width="230" height="65" rx="8" fill="#1E293B" stroke="#334155"/>
+    <text x="35" y="410" fill="#F1F5F9" font-size="13" font-weight="600">Reviews &amp; Trust Scoring</text>
+    <text x="35" y="430" fill="#94A3B8" font-size="11">Guest Favorite laurel &amp; Superhost criteria</text>
+
+    <!-- Service 6: Payment & Settlement -->
+    <rect x="20" y="460" width="230" height="65" rx="8" fill="#1E293B" stroke="#334155"/>
+    <text x="35" y="485" fill="#F1F5F9" font-size="13" font-weight="600">Payment &amp; Host Settlement</text>
+    <text x="35" y="505" fill="#94A3B8" font-size="11">Stripe / Razorpay idempotency ledger</text>
+  </g>
+
+  <!-- 4. Distributed Data & Storage Layer -->
+  <g transform="translate(910, 100)">
+    <rect width="250" height="660" rx="12" fill="url(#grad-data)" stroke="#10B981" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#6EE7B7" font-size="14" font-weight="700">4. DATA, STORAGE &amp; EVENT BUS</text>
+
+    <!-- PostgreSQL Cluster -->
+    <rect x="20" y="55" width="210" height="85" rx="8" fill="#1E293B" stroke="#10B981"/>
+    <text x="35" y="80" fill="#F1F5F9" font-size="13" font-weight="600">PostgreSQL (Multi-AZ)</text>
+    <text x="35" y="100" fill="#6EE7B7" font-size="11">Read-Replicas • Partitioning by Region</text>
+    <text x="35" y="118" fill="#64748B" font-size="10">ACID compliance for Bookings &amp; Hosts</text>
+
+    <!-- OpenSearch / Elasticsearch -->
+    <rect x="20" y="150" width="210" height="85" rx="8" fill="#1E293B" stroke="#10B981"/>
+    <text x="35" y="175" fill="#F1F5F9" font-size="13" font-weight="600">OpenSearch Geo-Cluster</text>
+    <text x="35" y="195" fill="#6EE7B7" font-size="11">Real-time listing search &amp; faceting</text>
+    <text x="35" y="213" fill="#64748B" font-size="10">P99 search latency &lt; 35ms</text>
+
+    <!-- Redis Cluster -->
+    <rect x="20" y="245" width="210" height="85" rx="8" fill="#1E293B" stroke="#10B981"/>
+    <text x="35" y="270" fill="#F1F5F9" font-size="13" font-weight="600">Redis Enterprise Cluster</text>
+    <text x="35" y="290" fill="#6EE7B7" font-size="11">Redlock locks • Hot Listing Cache</text>
+    <text x="35" y="308" fill="#64748B" font-size="10">Sub-millisecond inventory lookups</text>
+
+    <!-- Object Storage (S3) -->
+    <rect x="20" y="340" width="210" height="75" rx="8" fill="#1E293B" stroke="#334155"/>
+    <text x="35" y="365" fill="#F1F5F9" font-size="13" font-weight="600">AWS S3 Multi-Region</text>
+    <text x="35" y="385" fill="#94A3B8" font-size="11">Original &amp; Multi-Res Photo Store</text>
+
+    <!-- Kafka Event Stream -->
+    <rect x="20" y="425" width="210" height="95" rx="8" fill="#1E293B" stroke="#F59E0B"/>
+    <text x="35" y="450" fill="#FCD34D" font-size="13" font-weight="600">Apache Kafka Event Bus</text>
+    <text x="35" y="470" fill="#F59E0B" font-size="11">Debezium CDC • Async Events</text>
+    <text x="35" y="490" fill="#64748B" font-size="10">Notifications, Audit Logs, Analytics</text>
+
+    <!-- Kubernetes & GitOps -->
+    <rect x="20" y="530" width="210" height="100" rx="8" fill="#0F172A" stroke="#334155"/>
+    <text x="35" y="555" fill="#E2E8F0" font-size="12" font-weight="600">Deployment &amp; GitOps</text>
+    <text x="35" y="575" fill="#38BDF8" font-size="10">• Kubernetes (EKS) Multi-Region</text>
+    <text x="35" y="595" fill="#38BDF8" font-size="10">• ArgoCD Canary Deployment</text>
+    <text x="35" y="615" fill="#38BDF8" font-size="10">• Istio Service Mesh &amp; OpenTelemetry</text>
+  </g>
+
+  <!-- Connective Arrows -->
+  <line x1="300" y1="200" x2="330" y2="200" stroke="#0284C7" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="580" y1="200" x2="610" y2="200" stroke="#6366F1" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="880" y1="200" x2="910" y2="200" stroke="#F43F5E" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="880" y1="260" x2="910" y2="280" stroke="#F43F5E" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="880" y1="470" x2="910" y2="470" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>

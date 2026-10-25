@@ -1,0 +1,306 @@
+.host-section {
+  padding: 48px 0;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.host-section-title {
+  font-family: var(--font-family-base);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: -0.2px;
+  color: #222222;
+  margin-bottom: 24px;
+}
+
+.host-main-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .host-main-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+/* Left Column: Floating Host Card */
+.host-left-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.host-floating-card {
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  padding: 28px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.host-card-user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.host-avatar-wrap {
+  position: relative;
+  width: 104px;
+  height: 104px;
+  margin-bottom: 12px;
+}
+
+.host-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.host-verified-badge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #E11D48;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2.5px solid #ffffff;
+}
+
+.host-check-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.host-card-name {
+  font-family: var(--font-family-base);
+  font-size: 24px;
+  font-weight: 700;
+  color: #222222;
+  line-height: 1.15;
+  margin: 0 0 4px 0;
+}
+
+.host-card-role {
+  font-family: var(--font-family-base);
+  font-size: 14px;
+  font-weight: 400;
+  color: #222222;
+  margin: 0;
+}
+
+/* Stats column on right of floating card */
+.host-card-stats-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 90px;
+}
+
+.host-card-stat-item {
+  display: flex;
+  flex-direction: column;
+  padding: 6px 0;
+}
+
+.host-card-stat-num {
+  font-family: var(--font-family-base);
+  font-size: 20px;
+  font-weight: 700;
+  color: #222222;
+  line-height: 1.1;
+}
+
+.host-card-stat-lbl {
+  font-family: var(--font-family-base);
+  font-size: 11px;
+  font-weight: 500;
+  color: #222222;
+  margin-top: 2px;
+}
+
+.host-card-stat-divider {
+  height: 1px;
+  background-color: var(--color-border-light);
+  width: 100%;
+  margin: 4px 0;
+}
+
+/* Facts list below card */
+.host-facts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.host-fact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--font-family-base);
+  font-size: 15px;
+  color: #222222;
+}
+
+.host-fact-icon {
+  width: 24px;
+  height: 24px;
+  color: #222222;
+  flex-shrink: 0;
+}
+
+/* Right Column: Co-Hosts */
+.host-right-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.co-hosts-section {
+  margin-bottom: 32px;
+}
+
+.co-hosts-heading {
+  font-family: var(--font-family-base);
+  font-size: 18px;
+  font-weight: 600;
+  color: #222222;
+  margin-bottom: 20px;
+}
+
+.co-hosts-grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px 20px;
+}
+
+@media (max-width: 600px) {
+  .co-hosts-grid-3col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.co-host-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.co-host-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.co-host-avatar-letter {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.co-host-name {
+  font-family: var(--font-family-base);
+  font-size: 14px;
+  font-weight: 500;
+  color: #222222;
+}
+
+/* Host details */
+.host-details-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.host-details-heading {
+  font-family: var(--font-family-base);
+  font-size: 18px;
+  font-weight: 600;
+  color: #222222;
+  margin-bottom: 12px;
+}
+
+.host-detail-line {
+  font-family: var(--font-family-base);
+  font-size: 15px;
+  color: #222222;
+  line-height: 1.5;
+  margin: 0 0 4px 0;
+}
+
+.btn-message-host {
+  background-color: #f2f2f2;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  padding: 13px 23px;
+  font-family: var(--font-family-base);
+  font-size: 16px;
+  font-weight: 600;
+  color: #222222;
+  cursor: pointer;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  transition: background-color 0.15s ease;
+}
+
+.btn-message-host:hover {
+  background-color: #ebebeb;
+}
+
+.host-protection-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-family-base);
+  font-size: 12px;
+  color: #717171;
+  line-height: 1.4;
+}
+
+.host-shield-icon {
+  width: 20px;
+  height: 20px;
+  color: #717171;
+  flex-shrink: 0;
+}
+
+/* Modal form textarea */
+.modal-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #b0b0b0;
+  border-radius: 8px;
+  font-family: var(--font-family-base);
+  font-size: 15px;
+  color: #222222;
+  resize: vertical;
+}
+
+.modal-textarea:focus {
+  outline: 2px solid #222222;
+  border-color: #222222;
+}

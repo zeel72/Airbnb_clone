@@ -1,0 +1,453 @@
+.listing-main-content {
+  width: 100%;
+}
+
+/* Property Header & Stats */
+.property-title-stats-block {
+  padding-bottom: 24px;
+}
+
+.property-main-type {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+
+.property-specs-line {
+  font-size: 15px;
+  color: var(--color-text-primary);
+  font-weight: 400;
+}
+
+/* Guest Favourite Banner (Matching Reference Screenshot 2 & media_1792644210895.png) */
+.guest-favourite-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #DDDDDD;
+  border-radius: 24px;
+  padding: 22px 28px;
+  margin-bottom: 24px;
+  background-color: #ffffff;
+}
+
+.gf-left-block {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.gf-wreath-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.gf-wreath-icon {
+  width: 28px;
+  height: 48px;
+  color: #222222;
+  display: block;
+  flex-shrink: 0;
+}
+
+.gf-wreath-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #222222;
+  text-align: center;
+  letter-spacing: -0.2px;
+}
+
+.gf-desc-text {
+  font-size: 15.5px;
+  font-weight: 500;
+  color: #222222;
+  max-width: 310px;
+  line-height: 1.35;
+}
+
+.gf-right-scores {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.gf-score-box,
+.gf-reviews-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gf-score-num {
+  font-size: 22px;
+  font-weight: 700;
+  color: #222222;
+  line-height: 1.15;
+}
+
+.gf-stars-row {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-top: 4px;
+}
+
+.gf-star-filled {
+  width: 9.5px;
+  height: 9.5px;
+  color: #222222;
+  fill: #222222;
+}
+
+.gf-divider-line {
+  width: 1px;
+  height: 38px;
+  background-color: #DDDDDD;
+}
+
+.gf-reviews-count {
+  font-size: 22px;
+  font-weight: 700;
+  color: #222222;
+  line-height: 1.15;
+}
+
+.gf-reviews-label {
+  font-size: 14.5px;
+  color: #222222;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+.gf-reviews-label:hover {
+  color: #000000;
+}
+
+/* Host Info Row */
+.host-summary-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.host-avatar-circle-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.host-name-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.host-tenure {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+/* Highlights List */
+.highlights-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.highlight-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-text-primary);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.highlight-heading {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 2px;
+}
+
+.highlight-sub {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+/* Translation Banner */
+.translation-banner {
+  background-color: #F7F7F7;
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  font-size: 14px;
+  color: var(--color-text-primary);
+  margin: 24px 0;
+}
+
+.translation-banner strong {
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+/* Description Section */
+.description-text-body {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  margin-bottom: 16px;
+}
+
+.btn-show-more-desc {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: underline;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  margin-bottom: 32px;
+}
+
+/* Where You'll Sleep Section (Matching Reference Screenshot 3) */
+.sleeping-section {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.sleeping-section-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 24px;
+}
+
+.sleeping-photo-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.sleep-photo-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.sleep-card-img-wrap {
+  width: 100%;
+  height: 200px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 12px;
+  background-color: #eaeaea;
+}
+
+.sleep-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.sleep-photo-card:hover .sleep-card-img {
+  transform: scale(1.03);
+}
+
+.sleep-room-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 2px;
+}
+
+.sleep-room-bed {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+/* Amenities Section (Matching Reference Screenshot 4) */
+.amenities-section {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.amenities-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 24px;
+  margin-bottom: 24px;
+}
+
+.amenity-entry {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 16px;
+  color: var(--color-text-primary);
+}
+
+.amenity-entry.unavailable {
+  text-decoration: line-through;
+  color: #717171;
+}
+
+.btn-show-amenities {
+  display: inline-block;
+  background: #ffffff;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  padding: 13px 23px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222222;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+  user-select: none;
+}
+
+.btn-show-amenities:hover {
+  background-color: #f7f7f7;
+}
+
+.btn-show-amenities:active {
+  transform: scale(0.96);
+  background-color: #f0f0f0;
+}
+
+/* Modal Shared Styles */
+.airbnb-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.airbnb-modal-container {
+  background: #ffffff;
+  width: 780px;
+  max-width: 100%;
+  max-height: 85vh;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+  position: relative;
+  overflow: hidden;
+}
+
+.airbnb-modal-header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 10;
+  padding: 24px 24px 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.airbnb-modal-body {
+  overflow-y: auto;
+  padding: 0 24px 40px 24px;
+  flex: 1;
+}
+
+/* Calendar Section (Matching Reference Screenshot 4) */
+.calendar-section {
+  padding: 32px 0;
+}
+
+.calendar-header-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+
+.calendar-header-dates {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin-bottom: 24px;
+}
+
+.calendar-two-months-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  max-width: 620px;
+}
+
+.cal-month-nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.cal-days-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.cal-dates-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  row-gap: 4px;
+}
+
+.cal-cell {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cal-cell.start-date, .cal-cell.end-date {
+  background-color: #222222;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.cal-cell.range-middle {
+  background-color: #F7F7F7;
+  border-radius: 0;
+  color: #222222;
+}

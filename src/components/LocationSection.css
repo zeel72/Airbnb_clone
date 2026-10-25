@@ -1,0 +1,174 @@
+.location-section {
+  padding: 48px 0;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.location-title {
+  font-family: var(--font-family-base);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: -0.2px;
+  color: #222222;
+  margin-bottom: 8px;
+}
+
+.location-subtitle {
+  font-family: var(--font-family-base);
+  font-size: 15px;
+  color: #222222;
+  margin-bottom: 24px;
+}
+
+/* Map Canvas Container */
+.airbnb-map-canvas {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #EAF2E6;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.airbnb-map-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Top-Left Search Button */
+.map-search-btn {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.map-search-btn:hover {
+  transform: scale(1.04);
+  background-color: #f7f7f7;
+}
+
+/* Center Black Marker with House Icon */
+.map-center-marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #222222;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.map-house-icon {
+  width: 20px;
+  height: 20px;
+  color: #ffffff;
+}
+
+/* Top-Right Zoom Stack */
+.map-zoom-stack {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 5;
+}
+
+.map-zoom-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-family: var(--font-family-base);
+  font-size: 18px;
+  font-weight: 500;
+  color: #222222;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+  line-height: 1;
+  padding: 0;
+}
+
+.map-zoom-btn:hover {
+  transform: scale(1.04);
+  background-color: #f7f7f7;
+}
+
+/* Post-Map Information */
+.map-exact-location-note {
+  font-family: var(--font-family-base);
+  font-size: 14px;
+  color: #222222;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.neighborhood-highlights-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 720px;
+}
+
+.neighborhood-highlights-title {
+  font-family: var(--font-family-base);
+  font-size: 16px;
+  font-weight: 600;
+  color: #222222;
+  margin-bottom: 8px;
+}
+
+.neighborhood-highlights-desc {
+  font-family: var(--font-family-base);
+  font-size: 15px;
+  color: #222222;
+  line-height: 1.45;
+  margin-bottom: 12px;
+}
+
+.neighborhood-show-more-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--font-family-base);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #222222;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: opacity 0.15s ease;
+}
+
+.neighborhood-show-more-link:hover {
+  opacity: 0.8;
+}
